@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 // import { assets } from '../assets/assets';
-import { Link, NavLink } from 'react-router-dom';
-import { FaSearch } from "react-icons/fa";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser, FaSearch } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import { IoMenu } from "react-icons/io5";
 import { IoMdArrowDropleft } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    const [visible, setVisible] = useState(true);
-    console.log (visible)
+    const [visible, setVisible] = useState(false);
+    console.log(visible)
 
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
@@ -57,7 +56,9 @@ const Navbar = () => {
                     <FaCartShopping />
                     <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[4px]'>10</p>
                 </Link>
-                <IoMenu />
+                <div onClick={() => { setVisible(true) }}>
+                    <IoMenu />
+                </div>
 
             </div>
             {/* Sidebar menu for small screens */}
@@ -74,8 +75,8 @@ const Navbar = () => {
                     <NavLink className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
                 </div>
 
-                
-                
+
+
 
             </div>
         </div>
