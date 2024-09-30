@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// import { assets } from '../assets/assets';
+import { useState } from "react";
 import { FaRegUser, FaSearch } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoMdArrowDropleft } from "react-icons/io";
