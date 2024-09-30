@@ -1,4 +1,5 @@
 import React from 'react'
+import { assets } from '../assets/assets'
 
 const Hero = () => {
   return (
@@ -11,10 +12,10 @@ const Hero = () => {
                     <p className='text-sm font-medium md:text-base'>OUR BESTSELLERS</p>
 
                 </div>
-                <h1 className='text-3xl leading-relaxed sm:py-3 lg:text-5xl'>Latest Arrivals </h1>
+                <h1 className='text-3xl leading-relaxed prata-regular sm:py-3 lg:text-5xl'>Latest Arrivals </h1>
                 <div className='flex items-center gap-2'>
-                    <p className='font-semibold text-center'></p>
-                    <p></p>
+                    <p className='text-sm font-semibold md:text-base'>SHOP NOW</p>
+                    <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
 
                 </div>
 
@@ -22,6 +23,8 @@ const Hero = () => {
              </div>
 
         </div>
+        {/* {Hero Right Side} */}
+        <img className='w-full sm:w-1/2 ' src= {assets.ganpati_mandala_art} alt="" />
 
     </div>
   )

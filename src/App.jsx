@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
-import Home from './pages/home'
+import Home from './pages/Home'
 import Collection from './pages/collection'
 import About from './pages/about'
 import Contact from './pages/contact'
@@ -26,6 +26,7 @@ const App = () => {
         <Route path='/login' element={<Login/>} />
         <Route path='/place-order' element={<PlaceOrder/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        
         
       
         
