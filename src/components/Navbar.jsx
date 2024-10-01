@@ -4,6 +4,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -11,6 +13,7 @@ const Navbar = () => {
 
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
+            {/* <Link to='/'> <img src={assets.logo} className="w-36" alt="" /><Link/> */}
 
             <ul className='hidden gap-5 text-sm text-gray-700 sm:flex' >
 
