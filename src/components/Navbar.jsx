@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegUser, FaSearch } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoMdArrowDropleft } from "react-icons/io";
@@ -6,10 +6,12 @@ import { IoMenu } from "react-icons/io5";
 import { Link, NavLink } from 'react-router-dom';
 import React from "react";
 import { assets } from "../assets/assets";
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    console.log(visible)
+    const {setShowSearch} = useContext(ShopContext);
+  
 
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
@@ -40,7 +42,9 @@ const Navbar = () => {
 
             <div className='flex items-center gap-6'>
 
+                 <div onClick={()=>setShowSearch(true)}  className="w-5 cursor-pointer" >
                 <FaSearch />
+                </div>
                 <div className='relative group'>
                     <FaRegUser />
 

@@ -1,5 +1,5 @@
 
-import bandarwal from './bandarwal'
+import bandarwal from './bandarwal.jpg'
 import clock from './clock.jpg'
 import bandarwal2 from './bandarwal2.jpg'
 import bandarwal3 from './bandarwal3.jpg'
