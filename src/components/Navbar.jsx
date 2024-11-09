@@ -10,9 +10,8 @@ import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const {setShowSearch} = useContext(ShopContext);
+    const {setShowSearch, getCartCount} = useContext(ShopContext);
   
-
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             {/* <Link to='/'> <img src={assets.logo} className="w-36" alt="" /><Link/> */}
@@ -46,7 +45,7 @@ const Navbar = () => {
                 <FaSearch />
                 </div>
                 <div className='relative group'>
-                    <FaRegUser />
+                   <Link to={'/login'}> <FaRegUser /></Link>
 
                     <div className='absolute right-0 hidden pt-4 group-hover:block dropdown-menu'>
                         <div className='flex flex-col gap-2 px-5 py-3 text-gray-500 rounded w-36 bg-slate-100'>
@@ -60,7 +59,7 @@ const Navbar = () => {
 
                 <Link to='/cart' className='relative'>
                     <FaCartShopping />
-                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[4px]'>10</p>
+                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[4px]'>{getCartCount()}</p>
                 </Link>
                 <div onClick={() => { setVisible(true) }}>
                     <IoMenu />

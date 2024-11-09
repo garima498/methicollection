@@ -5,8 +5,6 @@ import { FaSearch } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { useLocation } from 'react-router-dom';
 
-
-
 const SearchBar = () => {
 
     const { search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);
@@ -14,14 +12,13 @@ const SearchBar = () => {
     const location = useLocation();
 
     useEffect(()=>{
-        if (location.pathname.contain('collection') ) {
+        if (location.pathname.includes('collection') && showSearch ) {
             setVisible(true);
 
         }
         else {
             setVisible(false)
         }
-
 
     },[location])
 
@@ -32,7 +29,7 @@ const SearchBar = () => {
           <FaSearch />
         </div>
 
-        <div  onClick={()=>setShowSearch(false)} className='inline-flex justify-end ' >
+        <div onClick={()=>setShowSearch(false)} className='inline-flex justify-end ' >
         <RxCross2 />
         </div>
 
@@ -40,5 +37,4 @@ const SearchBar = () => {
         ) : null
        
 }
-
-export default SearchBar
+export default SearchBar;
