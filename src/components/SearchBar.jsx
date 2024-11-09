@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { ShopContext } from '../context/ShopContext'
-import { assets } from '../assets/assets';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { useLocation } from 'react-router-dom';
+import { ShopContext } from '../context/ShopContext';
 
 const SearchBar = () => {
 
